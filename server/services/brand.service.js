@@ -2,10 +2,10 @@ const { Brand } = require("../models/brand");
 const { ApiError } = require("../middleware/apiError");
 const httpStatus = require("http-status");
 
-const addBrand = async (brandname) => {
+const addBrand = async (name) => {
   try {
     const brand = new Brand({
-      name: brandname,
+      name: name,
     });
     await brand.save();
     return brand;

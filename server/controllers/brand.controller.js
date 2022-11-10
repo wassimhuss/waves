@@ -3,7 +3,7 @@ const { brandService } = require("../services");
 const brandController = {
   async addBrand(req, res, next) {
     try {
-      const brand = await brandService.addBrand(req.body.brandname);
+      const brand = await brandService.addBrand(req.body.name);
       res.json(brand);
     } catch (error) {
       next(error);

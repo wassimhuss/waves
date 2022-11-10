@@ -30,16 +30,12 @@ const BrandsTable = ({
           <Table striped bordered hover>
             <thead>
               <tr>
-                <th>Created</th>
                 <th>Brand Name</th>
               </tr>
             </thead>
             <tbody>
               {brands.docs.map((item) => (
                 <tr key={item._id}>
-                  <td>
-                    <Moment to={item.date}></Moment>
-                  </td>
                   <td>{item.name}</td>
                   <td
                     className="action_btn remove_btn"

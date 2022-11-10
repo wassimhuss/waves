@@ -18,7 +18,7 @@ const AddBrand = (props) => {
 
   const formik = useFormik({
     initialValues: {
-      brandname: "",
+      name: "",
     },
     validationSchema: brandValidation,
     onSubmit: (values) => {
@@ -51,11 +51,11 @@ const AddBrand = (props) => {
             <div className="form-group">
               <TextField
                 style={{ width: "100%" }}
-                name="brandname"
+                name="name"
                 label="Enter a brand name"
                 variant="outlined"
-                {...formik.getFieldProps("brandname")}
-                {...errorHelper(formik, "brandname")}
+                {...formik.getFieldProps("name")}
+                {...errorHelper(formik, "name")}
               />
             </div>
             <Button variant="contained" color="primary" type="submit">
